@@ -6,31 +6,30 @@ weight = 1
 
 ## Experience
 
-### Amazon
+* **Amazon** - Software Engineer
 
-Software Engineer   |   *2021-04 - present*
+* **Electronic Arts** - Software Engineer
 
-### Electronic Arts
+* **Best Buy** - Software Engineer
 
-Cloud Engineer   |   *2020-04 - 2020-08*
+* **FPInnovations** - Electrical Engineer
 
-### Best Buy
+* **UBC Unmanned Aircraft Systems** - Aircraft Electronics Engineer
 
-Software Engineer   |   *2021-04 - 2021-08*
+More details [here](/experience/) or my [resume](https://drive.google.com/file/d/1d5w8Iah3SF9GxOBa9Bz6COCdWWfC5B3g/view).
 
 ---
 
 ## Projects
 
-* [VFD for Induction Motors](): A variable frequency drive (VFD) designed and built for mid-power consumer induction motors. Capable of controlling speed and torque of single and three-phase motors.
+* [VFD for Induction Motors](https://mattiasprojects.blogspot.com/2021/12/completion-of-vfd-pcb-and-demo.html)
 
-* [FOC Driver for PMSMs](): A motor driver for permanent magnet AC motors. It implements an FOC algorithm on an STM32 to control torque, speed, and position of the motor.
+* [FOC Driver for PMSMs](https://mattiasprojects.blogspot.com/2021/09/first-post-on-ac-servo-drive-project.html)
 
-* [ARManda](): A 4 DOF robotic manipulator from scratch. It uses NEMA stepper motors for the actuators, described in another project, and runs on ROS (RViz and MoveIt).
+* [ARManda](https://hackaday.io/project/173330-3d-printable-robotic-arm-armanda)
 
-* [BandoMap](): A web app for FPV drone pilots to find local flying spots as suggested by other pilots.
+* [BandoMap](https://github.com/mAzurkovic/BandoMap)
 
-* [NEMA Actuator](): A modular robotic actuator powered by a NEMA 17 stepper motor and custom planetary gearbox.
+* [NEMA Actuator](https://www.thingiverse.com/thing:4428749)
 
-* [Custom CNC Machine](): A 3-axis CNC machine specified and designed to be able to mill Aluminium. All parts chosen and assembled in Solidworks.
-
+* [Custom CNC Machine](https://mattiasprojects.blogspot.com/2021/09/revised-cnc-mill-design.html)
