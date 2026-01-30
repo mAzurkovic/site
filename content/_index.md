@@ -16,7 +16,7 @@ weight = 1
 
 * **UBC Unmanned Aircraft Systems** - Aircraft Electronics Engineer
 
-More details [here](/experience/) or my [resume](https://drive.google.com/file/d/1qEF59-bjrHD8Md8EOMLSRuuQjmk9LxbZ/view).
+More details [here](/experience/) or my [resume](https://drive.google.com/file/d/1RgH1tsM8JJlTTNIf9aMHQJdZGzKJZZuK/view).
 
 ---
 
