@@ -23,7 +23,7 @@ theme = 'hugo-bearblog'
     inline = [['\(', '\)'], ['$', '$']]
 
 [params]
-  blogTitle = 'Projects by Mattias'
+  blogTitle = '🤖 Projects by Mattias'
 
 # Comments via giscus (https://giscus.app). Fill in repoId/categoryId to enable.
 [params.giscus]
