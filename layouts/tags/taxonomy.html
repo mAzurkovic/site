@@ -1,0 +1,8 @@
+{{ define "main" }}
+<h3>Categories</h3>
+<ul class="blog-posts">
+  {{ range .Data.Terms.Alphabetical }}
+  <li><a href="{{ .Page.RelPermalink }}">#{{ .Page.LinkTitle }}</a>&nbsp;({{ .Count }})</li>
+  {{ end }}
+</ul>
+{{ end }}

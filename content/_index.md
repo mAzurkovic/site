@@ -22,9 +22,9 @@ More details [here](/experience/) or my [resume](https://drive.google.com/file/d
 
 ## Projects
 
-* [VFD for Induction Motors](https://mattiasprojects.blogspot.com/2021/12/completion-of-vfd-pcb-and-demo.html)
+* [VFD for Induction Motors](/blog/completion-of-vfd-pcb-and-demo/)
 
-* [FOC Driver for PMSMs](https://mattiasprojects.blogspot.com/2021/09/first-post-on-ac-servo-drive-project.html)
+* [FOC Driver for PMSMs](/blog/first-post-on-ac-servo-drive-project/)
 
 * [ARManda](https://hackaday.io/project/173330-3d-printable-robotic-arm-armanda)
 
@@ -32,4 +32,4 @@ More details [here](/experience/) or my [resume](https://drive.google.com/file/d
 
 * [NEMA Actuator](https://www.thingiverse.com/thing:4428749)
 
-* [Custom CNC Machine](https://mattiasprojects.blogspot.com/2021/09/revised-cnc-mill-design.html)
+* [Custom CNC Machine](/blog/revised-cnc-mill-design/)

@@ -1,0 +1,4 @@
+{{- $noop := .WordCount }}
+{{- if .Page.Store.Get "hasMath" }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" crossorigin="anonymous">
+{{- end }}

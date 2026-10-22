@@ -1,0 +1,5 @@
+{{ define "main" }}
+<h3>{{ .Title }}</h3>
+{{ partial "post-list.html" .Paginator.Pages }}
+{{ partial "pagination.html" . }}
+{{ end }}

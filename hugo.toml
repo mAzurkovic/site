@@ -2,3 +2,32 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = '> Mattias Zurković'
 theme = 'hugo-bearblog'
+
+[pagination]
+  pagerSize = 20
+
+[taxonomies]
+  tag = 'tags'
+
+[permalinks.taxonomy]
+  tags = '/blog/categories/'
+[permalinks.term]
+  tags = '/blog/categories/:slug/'
+
+[markup.goldmark.renderer]
+  unsafe = true # raw HTML in posts (embedded videos)
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [['\[', '\]'], ['$$', '$$']]
+    inline = [['\(', '\)'], ['$', '$']]
+
+[params]
+  blogTitle = 'Projects by Mattias'
+
+# Comments via giscus (https://giscus.app). Fill in repoId/categoryId to enable.
+[params.giscus]
+  repo = 'mAzurkovic/site'
+  repoId = 'R_kgDORBN2Ig'
+  category = 'Announcements'
+  categoryId = 'DIC_kwDORBN2Is4DJVDa'
