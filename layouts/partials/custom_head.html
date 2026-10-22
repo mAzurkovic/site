@@ -2,3 +2,8 @@
 {{- if .Page.Store.Get "hasMath" }}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" crossorigin="anonymous">
 {{- end }}
+{{- if partial "is-blog.html" . }}
+<style>
+  pre.mermaid { overflow-x: auto; text-align: center; background: none; }
+</style>
+{{- end }}
