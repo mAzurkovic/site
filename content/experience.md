@@ -11,13 +11,19 @@ title = 'Experience'
 
 Software Engineer   |   *2021-05 - present*
 
-- Led the design and development of *Negotiation Data Service* (NDS), a suite of APIs powering financial metrics for contract negotiations with third-party vendors. Improved P99 latency by 97% over legacy systems using AWS ECS, Aurora, Glue, and S3.
+- Led 3 engineers on the Supply Chain term granularity initiative to deliver offer-level automation for Bulk Buy, Pallet Ordering, Truckload, and Direct Imports negotiations. Saved customers 3.2K hours/week and increased Bulk Buy gain from \$110M to \$135M USD.
 
-- Built a scalable data ingestion and processing pipeline supporting 100GB+ weekly loads, including cross-region S3 access and a standardized Spark/Glue framework that reduced job development time from 7 to 2 days.
+- Tech-led the design and development of Negotiation Data Service (NDS), a suite of APIs supporting financial metrics for contract negotiations with vendors. Improved P99 latency by 97% over legacy systems while providing metrics for 150,000 companies using AWS ECS, Aurora, Glue, and S3.
 
-- Owned a React + Express negotiation portal with 1,000+ monthly users, backed by CloudFront, API Gateway, and Lambda. Improved portal performance by 1.8s P99 via multi-layer caching and lazy loading, optimizing critical API paths by 94%.
+- Exposed NDS via an MCP server (10 tools) powering 3 agents and ad-hoc metric queries, forming a foundation for the org’s AI-driven negotiation platform.
 
-- Designed a schema-driven validation system that eliminated 70K monthly customer-facing errors, streamlining negotiations and improving conversion rates.
+- Spearheaded team AI adoption with an OnCall Agent automating ticket triage and response, cutting investigation time from an average of 3 hours to 10 minutes. Adopted by all 10 team engineers.
+
+- Built a generic Spark+AWS Glue ingestion framework hosting 16 load jobs across 12 marketplaces, cutting new job onboarding from 7 to 2 days.
+
+- Owner of the Unified Negotiations Portal (UNP) with >1,000 monthly users, built on React+Express, CloudFront, API Gateway, and Lambda. Improved portal performance by 1.8s P99 via multi-layer caching and lazy loading, optimizing critical API paths by 94%.
+
+- Designed a schema-driven validation framework for negotiation terms that eliminated >70,000 monthly customer-facing errors, improved data quality, and increased successful negotiation conversions.
 
 ### Electronic Arts
 

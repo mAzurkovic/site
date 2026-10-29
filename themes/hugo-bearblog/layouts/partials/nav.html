@@ -1,7 +1,8 @@
+{{- $here := strings.TrimSuffix "/" .RelPermalink }}
 {{ range .Site.Menus.main }}
-<a href="{{ .URL }}">{{ .Name }}</a>
-<a href="/experience">Experience</a>
-<a href="/projects">Projects</a>
-<a href="/blog/">Blog</a>
-<a href="https://drive.google.com/file/d/1-yLcjTaG4Zv5298IZlAjP-GhihtgSNdn/view">Resume</a>
+<a href="{{ .URL }}"{{ if eq $here (strings.TrimSuffix "/" .URL) }} class="active"{{ end }}>{{ .Name }}</a>
+{{ range slice (slice "/experience" "Experience") (slice "/projects" "Projects") (slice "/blog/" "Blog") }}
+<a href="{{ index . 0 }}"{{ if eq $here (strings.TrimSuffix "/" (index . 0)) }} class="active"{{ end }}>{{ index . 1 }}</a>
+{{- end }}
+<a href="https://drive.google.com/file/d/1-yLcjTaG4Zv5298IZlAjP-GhihtgSNdn/view" target="_blank" rel="noopener">Resume</a>
 {{ end }}

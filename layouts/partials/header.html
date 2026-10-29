@@ -1,15 +1,33 @@
-{{ if partial "is-blog.html" . }}
-<a href="{{ "blog/" | relURL }}" class="title">
-  <h2>{{ site.Params.blogTitle }}</h2>
-</a>
-<nav>
-  <a href="{{ "blog/" | relURL }}">Home</a>
-  <a href="{{ (site.GetPage "/tags").RelPermalink }}">Categories</a>
+{{- $isBlog := partial "is-blog.html" . }}
+<div class="header-bar">
+  {{- if $isBlog }}
+  <a href="{{ "blog/" | relURL }}" class="title">
+    <h2>{{ site.Params.blogTitle }}</h2>
+  </a>
+  {{- else }}
+  <a href="{{ "" | relURL }}" class="title">
+    <h2>{{ .Site.Title }}</h2>
+  </a>
+  {{- end }}
+  <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+    <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+</div>
+{{- if $isBlog }}
+<nav id="site-nav">
+  <a href="{{ "blog/" | relURL }}"{{ if eq .RelPermalink ("blog/" | relURL) }} class="active"{{ end }}>Home</a>
+  {{- $tags := (site.GetPage "/tags").RelPermalink }}
+  <a href="{{ $tags }}"{{ if hasPrefix .RelPermalink $tags }} class="active"{{ end }}>Categories</a>
   <a href="{{ "" | relURL }}">My Site</a>
 </nav>
-{{ else }}
-<a href="{{ "" | relURL }}" class="title">
-  <h2>{{ .Site.Title }}</h2>
-</a>
-<nav>{{- partial "nav.html" . -}}</nav>
-{{ end }}
+{{- else }}
+<nav id="site-nav">{{- partial "nav.html" . -}}</nav>
+{{- end }}
+<script>
+  document.querySelector(".nav-toggle").addEventListener("click", function () {
+    var open = this.getAttribute("aria-expanded") !== "true";
+    this.setAttribute("aria-expanded", open);
+    document.getElementById("site-nav").classList.toggle("open", open);
+  });
+</script>
