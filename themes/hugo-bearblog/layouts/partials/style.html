@@ -12,8 +12,9 @@
     --blockquote-color: #222;
   }
 
+  /* dark mode follows the OS unless overridden by the theme toggle (data-theme) */
   @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme="light"]) {
       --background-color: #01242e;
       --heading-color: #eee;
       --text-color: #ddd;
@@ -21,6 +22,15 @@
       --visited-color: #8b6fcb;
       --blockquote-color: #ccc;
     }
+  }
+
+  :root[data-theme="dark"] {
+    --background-color: #01242e;
+    --heading-color: #eee;
+    --text-color: #ddd;
+    --link-color: #8cc2dd;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #ccc;
   }
 
   body {
@@ -94,8 +104,14 @@
     gap: 16px;
   }
 
-  .nav-toggle {
-    display: none;
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-toggle,
+  .theme-toggle {
     padding: 4px;
     background: none;
     border: none;
@@ -103,10 +119,40 @@
     cursor: pointer;
   }
 
-  .nav-toggle svg {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-toggle svg,
+  .theme-toggle svg {
     width: 26px;
     height: 26px;
     display: block;
+  }
+
+  .theme-toggle svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* show the moon in light mode, the sun in dark mode */
+  .theme-toggle .icon-sun,
+  :root[data-theme="dark"] .theme-toggle .icon-moon {
+    display: none;
+  }
+
+  :root[data-theme="dark"] .theme-toggle .icon-sun {
+    display: block;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .icon-moon {
+      display: none;
+    }
+
+    :root:not([data-theme="light"]) .theme-toggle .icon-sun {
+      display: block;
+    }
   }
 
   .nav-toggle .icon-close,
