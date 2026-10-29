@@ -18,6 +18,6 @@ Personal Hugo site deployed on Vercel. `vercel.json` runs `build.sh`; output dir
 - `layouts/index.html` — site-root override that injects the intro/headshot block above `{{ .Content }}` from `_index.md`. Theme layouts handle everything else.
 - `themes/hugo-bearblog/` — vendored theme (formerly a submodule, now committed flat so local edits stick — see commit 3cac3e8). Edit here for theme-level changes; otherwise override the specific file under `layouts/`.
 - `static/images/` — served at site root (e.g. `/images/headshot.png`).
-- `public/` — generated output, committed. Will show as modified after any local `hugo` run.
+- `public/` — generated output, gitignored. Vercel builds it fresh on each deploy.
 
 `hugo.toml` `baseURL` is a placeholder; the real baseURL is injected at build time from `VERCEL_PROJECT_PRODUCTION_URL`.
